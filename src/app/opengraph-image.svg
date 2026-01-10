@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0D14"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="220" y1="120" x2="980" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF9850"/>
+      <stop offset="1" stop-color="#FF2C80"/>
+    </linearGradient>
+    <filter id="blur" x="-40" y="-40" width="1280" height="710" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="260" cy="110" r="220" fill="#FF2C80" opacity="0.25" filter="url(#blur)"/>
+  <circle cx="980" cy="170" r="260" fill="#FF9850" opacity="0.22" filter="url(#blur)"/>
+  <circle cx="700" cy="590" r="260" fill="#FF2C80" opacity="0.18" filter="url(#blur)"/>
+
+  <g transform="translate(90,110)">
+    <rect x="0" y="0" width="92" height="92" rx="24" fill="#0B0D14" stroke="#252A3A" stroke-width="2"/>
+    <path d="M46 18c12 0 22 10 22 22S58 62 46 62 24 52 24 40s10-22 22-22z" fill="url(#grad)"/>
+    <path d="M20 70c-2-8 4-16 12-16h8c4 0 7 2 9 5l-3 4c-3 4-9 4-12 0l-2-3h-2c-6 0-11 5-10 10 3 12 15 21 26 21s23-9 26-21c1-5-4-10-10-10h-2l-2 3c-3 4-9 4-12 0l-3-4c2-3 5-5 9-5h8c8 0 14 8 12 16-5 20-23 35-44 35S25 90 20 70z" fill="url(#grad)"/>
+  </g>
+
+  <text x="210" y="205" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system" font-size="54" font-weight="700">
+    Monk Technologies
+  </text>
+  <text x="210" y="270" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system" font-size="30" font-weight="500">
+    Training-first AI education (MLOps + GenAI)
+  </text>
+  <text x="210" y="340" fill="#94A3B8" font-family="Inter, ui-sans-serif, system-ui, -apple-system" font-size="22" font-weight="500">
+    Hands-on programs • Weekend cohorts • Certificate
+  </text>
+
+  <rect x="210" y="390" width="520" height="74" rx="22" fill="#111827" stroke="#252A3A" stroke-width="2"/>
+  <text x="244" y="438" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system" font-size="24" font-weight="600">
+    Enroll via WhatsApp
+  </text>
+  <circle cx="694" cy="427" r="6" fill="#FF2C80"/>
+  <circle cx="716" cy="427" r="6" fill="#FF9850"/>
+</svg>
+
+
