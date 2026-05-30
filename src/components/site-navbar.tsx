@@ -11,6 +11,8 @@ const NAV = [
   { href: "/contact", label: "Contact" }
 ];
 
+const LMS_URL = "https://lms.monk-technologies.com/login";
+
 export function SiteNavbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/60 backdrop-blur">
@@ -53,6 +55,17 @@ export function SiteNavbar() {
         <div className="flex items-center gap-2">
           <Button
             asChild
+            href={LMS_URL}
+            target="_blank"
+            rel="noreferrer"
+            variant="secondary"
+            size="md"
+            className="hidden md:inline-flex"
+          >
+            Sign In
+          </Button>
+          <Button
+            asChild
             href="https://wa.link/nprk9l"
             target="_blank"
             rel="noreferrer"
@@ -61,7 +74,7 @@ export function SiteNavbar() {
           >
             Chat on WhatsApp
           </Button>
-          <MobileNav items={NAV} />
+          <MobileNav items={NAV} lmsUrl={LMS_URL} />
         </div>
       </div>
     </header>

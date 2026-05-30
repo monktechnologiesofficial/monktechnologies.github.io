@@ -6,9 +6,11 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
 
 export function MobileNav({
-  items
+  items,
+  lmsUrl
 }: {
   items: Array<{ href: string; label: string }>;
+  lmsUrl: string;
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -85,6 +87,14 @@ export function MobileNav({
                   {it.label}
                 </Link>
               ))}
+              <a
+                href={lmsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl bg-card px-3 py-3 text-sm font-semibold text-foreground ring-1 ring-border transition hover:bg-muted"
+              >
+                Sign In
+              </a>
               <a
                 href="https://wa.link/nprk9l"
                 target="_blank"
