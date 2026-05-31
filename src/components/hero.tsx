@@ -1,30 +1,20 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-border bg-card/40 p-6 shadow-glow sm:p-10">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,92,128,.35),transparent_60%)] blur-2xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,152,80,.28),transparent_60%)] blur-2xl"
-      />
-
-      <div className="grid items-center gap-10 md:grid-cols-[1.15fr_.85fr]">
-        <div className="space-y-6">
+    <section className="space-y-12">
+      <div className="grid items-center gap-12 md:grid-cols-[1.1fr_.9fr]">
+        <div className="space-y-7">
           <div className="flex flex-wrap items-center gap-2">
             <Badge>Hands-on</Badge>
             <Badge>Job-ready</Badge>
             <Badge>GenAI + MLOps</Badge>
           </div>
 
-          <h1 className="text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            Become the person who can <span className="text-[hsl(var(--primary))]">ship AI</span>
-            .
+          <h1 className="text-balance text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            Become the person who can{" "}
+            <span className="text-[hsl(var(--primary))]">ship AI</span>.
           </h1>
 
           <p className="max-w-xl text-balance text-base text-mutedForeground sm:text-lg">
@@ -48,86 +38,100 @@ export function Hero() {
               Ask about enrollment
             </Button>
           </div>
-
-          <div className="grid max-w-xl grid-cols-3 gap-3 pt-2 text-sm">
-            <div className="rounded-xl border border-border bg-background/30 p-3">
-              <p className="font-semibold">Projects</p>
-              <p className="mt-1 text-xs text-mutedForeground">
-                Build portfolio-grade systems
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-background/30 p-3">
-              <p className="font-semibold">Mentorship</p>
-              <p className="mt-1 text-xs text-mutedForeground">
-                Feedback loops that compound
-              </p>
-            </div>
-            <div className="rounded-xl border border-border bg-background/30 p-3">
-              <p className="font-semibold">Outcomes</p>
-              <p className="mt-1 text-xs text-mutedForeground">
-                Learn what real teams need
-              </p>
-            </div>
-          </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute inset-0 -z-10 rounded-2xl bg-[conic-gradient(from_210deg,rgba(255,92,128,.55),rgba(255,152,80,.5),rgba(255,92,128,.55))] blur-2xl opacity-40" />
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-background/40 p-5">
-            <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12 overflow-hidden rounded-2xl bg-muted ring-1 ring-border">
-                <Image
-                  src="/brand/monk-logo.svg"
-                  alt="Monk logo"
-                  fill
-                  sizes="48px"
-                  className="object-contain p-2"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Monk Technologies</p>
-                <p className="text-xs text-mutedForeground">
-                  Training that feels like building
-                </p>
-              </div>
-            </div>
-            <div className="mt-5 space-y-3">
-              <div className="rounded-xl border border-border bg-card/50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-mutedForeground">
-                  Next cohort
-                </p>
-                <p className="mt-1 text-lg font-semibold tracking-tight">
-                  MLOps & GenAI
-                </p>
-                <p className="mt-1 text-sm text-mutedForeground">
-                  End-to-end—from data to deployment.
-                </p>
-              </div>
-              <div className="rounded-xl border border-border bg-card/50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-mutedForeground">
-                  What you’ll build
-                </p>
-                <ul className="mt-2 space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))]" />
-                    Retrieval-Augmented Generation (RAG) app
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))]" />
-                    CI/CD for model & prompt changes
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))]" />
-                    Monitoring & evaluation dashboards
-                  </li>
-                </ul>
-              </div>
-            </div>
+        {/* Dark course mockup — preview the learning experience, not raw code. */}
+        <CurriculumPanel />
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-3">
+        {[
+          { title: "Projects", body: "Build portfolio-grade systems" },
+          { title: "Mentorship", body: "Feedback loops that compound" },
+          { title: "Outcomes", body: "Learn what real teams need" }
+        ].map((s) => (
+          <div key={s.title} className="rounded-xl border border-border bg-card p-5">
+            <p className="font-medium">{s.title}</p>
+            <p className="mt-1 text-sm text-mutedForeground">{s.body}</p>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
 }
 
+const MODULES = [
+  { label: "Foundations & tooling", state: "done" as const },
+  { label: "Build a RAG app", state: "done" as const },
+  { label: "CI/CD for models", state: "active" as const, progress: 45 },
+  { label: "Monitoring & evals", state: "todo" as const },
+  { label: "Capstone deployment", state: "todo" as const }
+];
 
+function CurriculumPanel() {
+  return (
+    <div className="overflow-hidden rounded-2xl bg-surfaceDark shadow-glow">
+      <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+        <span className="h-3 w-3 rounded-full bg-white/15" />
+        <span className="h-3 w-3 rounded-full bg-white/15" />
+        <span className="h-3 w-3 rounded-full bg-white/15" />
+        <span className="ml-2 text-xs font-medium text-onDarkSoft">
+          MLOps &amp; GenAI · your course
+        </span>
+      </div>
+
+      <ol className="space-y-1 p-4">
+        {MODULES.map((m, i) => (
+          <li
+            key={m.label}
+            className="flex items-center gap-3 rounded-lg px-3 py-2.5"
+          >
+            <span
+              className={
+                m.state === "done"
+                  ? "flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#5db872] text-[11px] font-bold text-surfaceDark"
+                  : m.state === "active"
+                    ? "flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--primary))] text-[10px] text-white"
+                    : "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/20 text-[11px] text-onDarkSoft"
+              }
+            >
+              {m.state === "done" ? "✓" : m.state === "active" ? "▸" : i + 1}
+            </span>
+            <span
+              className={
+                m.state === "todo"
+                  ? "flex-1 text-sm text-onDarkSoft"
+                  : "flex-1 text-sm text-onDark"
+              }
+            >
+              {m.label}
+            </span>
+            {m.state === "active" ? (
+              <span className="flex items-center gap-2">
+                <span className="h-1.5 w-16 overflow-hidden rounded-full bg-white/10">
+                  <span
+                    className="block h-full rounded-full bg-[hsl(var(--primary))]"
+                    style={{ width: `${m.progress}%` }}
+                  />
+                </span>
+                <span className="font-mono text-xs text-onDarkSoft">
+                  {m.progress}%
+                </span>
+              </span>
+            ) : null}
+          </li>
+        ))}
+      </ol>
+
+      <div className="flex items-center gap-5 border-t border-white/10 px-5 py-3 text-xs text-onDarkSoft">
+        <span className="flex items-center gap-1.5">
+          <span className="text-[#e8a55a]">🔥</span> 7-day streak
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="text-[hsl(var(--primary))]">★</span>
+          <span className="font-mono">320</span> points
+        </span>
+      </div>
+    </div>
+  );
+}

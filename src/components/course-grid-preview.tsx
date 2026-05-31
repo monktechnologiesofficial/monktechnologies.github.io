@@ -13,40 +13,30 @@ export async function CourseGridPreview() {
           <Link
             key={c.slug}
             href={`/courses/${c.slug}`}
-            className="group relative overflow-hidden rounded-2xl border border-border bg-card/40 p-5 shadow-glow transition hover:-translate-y-0.5 hover:bg-card/60"
+            className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-8 transition hover:border-[hsl(var(--primary))]"
           >
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,92,128,.22),transparent_60%)] blur-2xl"
-            />
-            <div className="relative space-y-4">
-              <div className="flex flex-wrap items-center gap-2">
-                {c.duration ? (
-                  <Badge className="bg-background/20">{c.duration}</Badge>
-                ) : null}
-                {c.level ? (
-                  <Badge className="bg-background/20">{c.level}</Badge>
-                ) : null}
-              </div>
-              <div>
-                <p className="text-lg font-semibold tracking-tight">
-                  {c.title}
-                </p>
-                <p className="mt-1 text-sm text-mutedForeground">
-                  A modern curriculum that teaches what real teams use.
-                </p>
-              </div>
-              <ul className="space-y-2 text-sm text-mutedForeground">
-                {(c.highlights?.slice(0, 3) ?? []).map((b) => (
-                  <li key={b} className="flex items-start gap-2">
-                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))]" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-2 text-sm font-semibold text-foreground/90">
-                View details →
-              </div>
+            <div className="flex flex-wrap items-center gap-2">
+              {c.duration ? <Badge>{c.duration}</Badge> : null}
+              {c.level ? <Badge>{c.level}</Badge> : null}
+            </div>
+            <div>
+              <p className="font-display text-2xl font-medium tracking-tight">
+                {c.title}
+              </p>
+              <p className="mt-1 text-sm text-mutedForeground">
+                A modern curriculum that teaches what real teams use.
+              </p>
+            </div>
+            <ul className="space-y-2 text-sm text-mutedForeground">
+              {(c.highlights?.slice(0, 3) ?? []).map((b) => (
+                <li key={b} className="flex items-start gap-2">
+                  <span className="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-[hsl(var(--primary))]" />
+                  {b}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto pt-2 text-sm font-medium text-[hsl(var(--primary))]">
+              View details →
             </div>
           </Link>
         ))}

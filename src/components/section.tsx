@@ -28,7 +28,7 @@ export function Section({
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-balance text-2xl font-semibold tracking-tight sm:text-3xl">
+          <h2 className="text-balance text-3xl font-medium tracking-tight sm:text-4xl">
             {title}
           </h2>
           {description ? (

@@ -1,11 +1,30 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cormorant_Garamond, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNavbar } from "@/components/site-navbar";
 import { WhatsAppFloatingButton } from "@/components/whatsapp-floating-button";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans"
+});
+
+// Open-source stand-in for Anthropic's Copernicus / Tiempos Headline display serif.
+const display = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  display: "swap",
+  variable: "--font-display"
+});
+
+// Code-window mockups (Claude's signature product chrome).
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-mono"
+});
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
@@ -39,15 +58,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className={`scroll-smooth ${inter.variable} ${display.variable} ${mono.variable}`}
+    >
       <body className={inter.className}>
         <div className="relative min-h-dvh overflow-x-clip">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 -z-10"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_10%_0%,rgba(255,92,128,.25),transparent_60%),radial-gradient(900px_circle_at_90%_10%,rgba(255,152,80,.22),transparent_55%),radial-gradient(900px_circle_at_40%_95%,rgba(255,44,128,.18),transparent_55%)]" />
-            <div className="noise absolute inset-0" />
+            <div className="absolute inset-0 bg-[radial-gradient(1100px_circle_at_12%_-5%,rgba(204,120,92,.07),transparent_60%),radial-gradient(900px_circle_at_90%_8%,rgba(232,165,90,.06),transparent_55%)]" />
           </div>
 
           <SiteNavbar />

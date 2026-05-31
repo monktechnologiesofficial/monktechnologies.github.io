@@ -38,7 +38,7 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
 
   const variants: Record<ButtonVariant, string> = {
     primary:
-      "bg-primary text-primaryForeground shadow-glow hover:brightness-110 active:brightness-95",
+      "bg-primary text-primaryForeground hover:brightness-105 active:brightness-95",
     secondary:
       "bg-card text-foreground ring-1 ring-border hover:bg-muted active:bg-card",
     ghost: "text-foreground hover:bg-muted active:bg-card"

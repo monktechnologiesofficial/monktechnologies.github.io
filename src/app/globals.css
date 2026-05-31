@@ -4,16 +4,21 @@
 
 @layer base {
   :root {
-    color-scheme: dark;
-    --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
-    --muted: 222 25% 12%;
-    --muted-foreground: 215 20% 70%;
-    --border: 222 20% 18%;
-    --primary: 332 93% 60%;
+    color-scheme: light;
+    /* Claude editorial palette — warm cream canvas, coral accent, navy dark surfaces */
+    --background: 48 33% 97%;        /* canvas  #faf9f5 */
+    --foreground: 60 3% 8%;          /* ink     #141413 */
+    --card: 39 35% 90%;              /* surface-card #efe9de */
+    --card-foreground: 60 3% 8%;
+    --muted: 37 39% 94%;             /* surface-soft #f5f0e8 */
+    --muted-foreground: 45 4% 41%;   /* muted   #6c6a64 */
+    --border: 30 22% 87%;            /* hairline #e6dfd8 */
+    --primary: 15 52% 58%;           /* coral   #cc785c */
     --primary-foreground: 0 0% 100%;
+    /* dark navy surfaces — used by the footer (Claude's footer never inverts) */
+    --surface-dark: 40 7% 9%;        /* #181715 */
+    --on-dark: 48 33% 97%;           /* cream-tinted white #faf9f5 */
+    --on-dark-soft: 42 5% 61%;       /* #a09d96 */
   }
 
   * {
@@ -24,8 +29,15 @@
     @apply bg-background text-foreground antialiased;
   }
 
+  /* Editorial split: slab-serif display headlines, humanist sans body */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  }
+
   ::selection {
-    background: hsl(var(--primary) / 0.3);
+    background: hsl(var(--primary) / 0.25);
   }
 }
 
