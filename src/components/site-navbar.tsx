@@ -18,13 +18,13 @@ export function SiteNavbar() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/60 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
         <Link href="/" className="group flex items-center gap-3">
-          <div className="relative h-9 w-9 overflow-hidden rounded-xl bg-muted ring-1 ring-border">
+          <div className="relative h-9 w-9 overflow-hidden">
             <Image
-              src="/brand/monk-logo.svg"
+              src="/brand/monk-logo.png"
               alt="Monk Technologies"
               fill
               sizes="36px"
-              className="object-contain p-1.5"
+              className="object-contain"
               priority
             />
           </div>

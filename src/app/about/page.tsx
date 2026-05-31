@@ -41,13 +41,13 @@ export default function AboutPage() {
             className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-[radial-gradient(circle_at_center,rgba(204,120,92,.25),transparent_60%)] blur-2xl"
           />
           <div className="relative flex items-center gap-4">
-            <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-muted ring-1 ring-border">
+            <div className="relative h-14 w-14 overflow-hidden">
               <Image
-                src="/brand/monk-logo.svg"
+                src="/brand/monk-logo.png"
                 alt="Monk logo"
                 fill
                 sizes="56px"
-                className="object-contain p-2"
+                className="object-contain"
               />
             </div>
             <div>
