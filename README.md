@@ -13,4 +13,4 @@ npm run dev
 
 Course content lives in `content/courses/*.mdx`. See `content/README.md` for the structure.
 
-
+Update 30 Aug Certs
