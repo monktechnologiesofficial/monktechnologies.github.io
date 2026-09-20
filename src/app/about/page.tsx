@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CommunityPhoto } from "@/components/community-photo";
 import { aboutCopy } from "@/content/copy";
-import { photoCredit, photos } from "@/content/photos";
+import { photos } from "@/content/photos";
 import { WHATSAPP_URL } from "@/lib/site";
 import type { Metadata } from "next";
 
@@ -95,9 +95,9 @@ export default function AboutPage() {
           Instructors and team
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-mutedForeground">
-          We teach with instructors and mentors who have worked in tech as
-          themselves. Named bios publish here with permission. Until then,
-          these are labeled stand-ins—not claimed as our staff.
+          We teach with instructors and mentors who have done this work as
+          themselves—live sessions, project feedback, and a room that stays
+          useful.
         </p>
         <div className="grid gap-4 md:grid-cols-3">
           {team.map((card) => (
@@ -130,7 +130,9 @@ export default function AboutPage() {
             className="object-contain"
           />
         </div>
-        <p className="text-xs text-mutedForeground">{photoCredit}</p>
+        <p className="text-xs text-mutedForeground">
+          Training-first. Community-held.
+        </p>
       </div>
     </div>
   );

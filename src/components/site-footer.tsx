@@ -66,7 +66,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 text-xs text-onDarkSoft sm:px-6">
           <p>© {new Date().getFullYear()} Monk Technologies. All rights reserved.</p>
-          <p className="hidden sm:block">Year-round. Not a campaign. Photos: Nappy.co (CC0).</p>
+          <p className="hidden sm:block">Year-round. Not a campaign.</p>
         </div>
       </div>
     </footer>

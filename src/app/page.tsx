@@ -7,7 +7,7 @@ import { CommunityMosaic } from "@/components/community-mosaic";
 import { CommunityPhoto } from "@/components/community-photo";
 import { WhatsAppJoin } from "@/components/whatsapp-join";
 import { homeCopy } from "@/content/copy";
-import { photoCredit, photos } from "@/content/photos";
+import { photos } from "@/content/photos";
 
 export default function HomePage() {
   return (
@@ -62,7 +62,7 @@ export default function HomePage() {
       <Section
         eyebrow="Community"
         title="What our community says"
-        description="Learner words, unedited. Portrait stand-ins until we have permission to publish names and photos."
+        description="Straight from the cohort. Unedited."
       >
         <Testimonials />
       </Section>
@@ -70,7 +70,6 @@ export default function HomePage() {
       <WhatsAppJoin heading="Scan to join the community" />
 
       <EnrollmentCTA />
-      <p className="text-center text-xs text-mutedForeground">{photoCredit}</p>
     </div>
   );
 }

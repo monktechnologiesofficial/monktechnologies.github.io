@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { CommunityPhoto } from "@/components/community-photo";
 import { WhatsAppJoin } from "@/components/whatsapp-join";
 import { communityCopy } from "@/content/copy";
-import { photoCredit, photos } from "@/content/photos";
+import { photos } from "@/content/photos";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -72,8 +72,7 @@ export default function CommunityPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">In community</h2>
         <p className="max-w-2xl text-sm text-mutedForeground">
-          Coworking, presenting, coding, teaching. Replace these stand-ins with
-          Monk photos as permissions land.
+          Coworking, presenting, coding, teaching—the work, in the room.
         </p>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
           {gallery.map((p) => (
@@ -97,7 +96,6 @@ export default function CommunityPage() {
           Cohort dates and live sessions land in WhatsApp.
         </p>
       </div>
-      <p className="text-xs text-mutedForeground">{photoCredit}</p>
     </div>
   );
 }
