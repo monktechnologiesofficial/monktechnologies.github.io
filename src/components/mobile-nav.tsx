@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
+import { WHATSAPP_URL } from "@/lib/site";
 
 export function MobileNav({
   items,
@@ -25,26 +26,32 @@ export function MobileNav({
       if (e.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
   }, [open]);
 
   const label = useMemo(() => (open ? "Close menu" : "Open menu"), [open]);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         aria-label={label}
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-card/40 ring-1 ring-border transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-card/40 ring-1 ring-border transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2 focus-visible:ring-offset-background"
       >
         <span className="sr-only">{label}</span>
         <span
           aria-hidden="true"
           className={cn(
             "relative block h-4 w-5",
-            open ? "[&>i]:translate-y-0 [&>i:nth-child(1)]:rotate-45 [&>i:nth-child(2)]:opacity-0 [&>i:nth-child(3)]:-rotate-45" : ""
+            open
+              ? "[&>i]:translate-y-0 [&>i:nth-child(1)]:rotate-45 [&>i:nth-child(2)]:opacity-0 [&>i:nth-child(3)]:-rotate-45"
+              : ""
           )}
         >
           <i className="absolute left-0 top-0 h-0.5 w-5 rounded bg-foreground transition" />
@@ -63,12 +70,12 @@ export function MobileNav({
         <button
           type="button"
           aria-label="Close menu overlay"
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-surfaceDark/70 backdrop-blur-sm"
           onClick={() => setOpen(false)}
         />
         <div
           className={cn(
-            "absolute right-4 top-4 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-border bg-background/80 shadow-glow backdrop-blur",
+            "absolute right-4 top-4 w-[min(22rem,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-border bg-background shadow-glow",
             "transition-transform",
             open ? "translate-y-0" : "-translate-y-2"
           )}
@@ -96,12 +103,12 @@ export function MobileNav({
                 Sign In
               </a>
               <a
-                href="https://wa.link/nprk9l"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-xl bg-primary px-3 py-3 text-sm font-semibold text-primaryForeground transition hover:brightness-110"
               >
-                Chat on WhatsApp
+                Join the Community →
               </a>
             </div>
           </div>
@@ -110,5 +117,3 @@ export function MobileNav({
     </div>
   );
 }
-
-

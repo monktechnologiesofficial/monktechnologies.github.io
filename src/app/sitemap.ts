@@ -8,7 +8,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
   const base = siteUrl.replace(/\/$/, "");
 
-  const staticRoutes = ["", "/courses", "/youtube", "/about", "/contact"].map(
+  const staticRoutes = [
+    "",
+    "/courses",
+    "/youtube",
+    "/about",
+    "/contact",
+    "/community",
+    "/resources"
+  ].map(
     (p) => ({
       url: `${base}${p}`,
       lastModified: new Date()

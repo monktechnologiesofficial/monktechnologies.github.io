@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 type Action = {
   label: string;
   href: string;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "blue";
+  target?: string;
+  rel?: string;
 };
 
 export function Section({
@@ -46,6 +48,8 @@ export function Section({
                 asChild
                 href={a.href}
                 variant={a.variant ?? "primary"}
+                target={a.target}
+                rel={a.rel}
               >
                 {a.label}
               </Button>

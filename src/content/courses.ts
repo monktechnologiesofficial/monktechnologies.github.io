@@ -2,6 +2,16 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import matter from "gray-matter";
 
+function asHighlight(h: unknown): string {
+  if (typeof h === "string") return h;
+  if (h && typeof h === "object") {
+    return Object.entries(h as Record<string, string>)
+      .map(([k, v]) => `${k}: ${v}`)
+      .join(", ");
+  }
+  return String(h);
+}
+
 export type CourseMeta = {
   title: string;
   slug: string;
@@ -44,7 +54,7 @@ export async function getAllCourses(): Promise<CourseMeta[]> {
         level: data.level ? String(data.level) : undefined,
         duration: data.duration ? String(data.duration) : undefined,
         highlights: Array.isArray(data.highlights)
-          ? data.highlights.map(String)
+          ? data.highlights.map(asHighlight)
           : undefined
       } satisfies CourseMeta;
     })
@@ -73,7 +83,7 @@ export async function getCourseSourceBySlug(slug: string) {
     level: data.level ? String(data.level) : undefined,
     duration: data.duration ? String(data.duration) : undefined,
     highlights: Array.isArray(data.highlights)
-      ? data.highlights.map(String)
+      ? data.highlights.map(asHighlight)
       : undefined
   };
   return { meta, content };

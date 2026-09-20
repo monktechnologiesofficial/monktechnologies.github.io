@@ -1,137 +1,110 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { NeuralField } from "@/components/neural-field";
+import { homeCopy } from "@/content/copy";
+import { WHATSAPP_URL } from "@/lib/site";
 
 export function Hero() {
   return (
     <section className="space-y-12">
-      <div className="grid items-center gap-12 md:grid-cols-[1.1fr_.9fr]">
+      <div className="grid items-center gap-12 md:grid-cols-[1.15fr_.85fr]">
         <div className="space-y-7">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge>Hands-on</Badge>
-            <Badge>Job-ready</Badge>
-            <Badge>GenAI + MLOps</Badge>
+            <Badge>Black AI academy</Badge>
+            <Badge>MLOps + GenAI</Badge>
+            <Badge>Job-focused</Badge>
           </div>
 
-          <h1 className="text-balance text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
-            Become the person who can{" "}
-            <span className="text-[hsl(var(--primary))]">ship AI</span>.
-          </h1>
-
-          <p className="max-w-xl text-balance text-base text-mutedForeground sm:text-lg">
-            Monk Technologies is a training-first AI company. We help learners
-            master MLOps and GenAI with project-driven curricula and modern
-            tooling.
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-electric">
+            {homeCopy.eyebrow}
           </p>
 
+          <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+            Lead the AI revolution
+            <span className="text-electric">—not just join it.</span>
+          </h1>
+
+          <p className="max-w-xl text-balance text-base font-medium text-foreground sm:text-lg">
+            {homeCopy.subheadline}
+          </p>
+
+          <div className="max-w-xl space-y-3 text-sm text-mutedForeground sm:text-base">
+            {homeCopy.heroBody.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+
           <div className="flex flex-wrap gap-3">
-            <Button asChild size="lg" href="/courses">
-              Explore courses
+            <Button asChild size="lg" href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+              {homeCopy.ctas.community}
             </Button>
             <Button
               asChild
               size="lg"
-              variant="secondary"
-              href="https://wa.link/nprk9l"
+              variant="blue"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
             >
-              Ask about enrollment
+              {homeCopy.ctas.seat}
+            </Button>
+            <Button asChild size="lg" variant="secondary" href="/youtube">
+              {homeCopy.ctas.startFree}
             </Button>
           </div>
         </div>
 
-        {/* Dark course mockup — preview the learning experience, not raw code. */}
-        <CurriculumPanel />
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-3">
-        {[
-          { title: "Projects", body: "Build portfolio-grade systems" },
-          { title: "Mentorship", body: "Feedback loops that compound" },
-          { title: "Outcomes", body: "Learn what real teams need" }
-        ].map((s) => (
-          <div key={s.title} className="rounded-xl border border-border bg-card p-5">
-            <p className="font-medium">{s.title}</p>
-            <p className="mt-1 text-sm text-mutedForeground">{s.body}</p>
+        <div className="relative overflow-hidden rounded-2xl bg-surfaceDark p-6 shadow-glow sm:p-8">
+          <NeuralField className="pointer-events-none absolute -right-8 -top-6 h-64 w-full opacity-70" />
+          <div className="relative space-y-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gold">
+              In the room
+            </p>
+            <p className="font-display text-2xl font-bold text-onDark">
+              Builders. Critics. Operators.
+            </p>
+            <p className="text-sm text-onDarkSoft">
+              Students, career switchers, founders, and working professionals
+              training to ship AI—and to question it.
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              {[
+                { label: "Ages", value: "18–60+" },
+                { label: "Regions", value: "US + diaspora" },
+                { label: "Entry", value: "Beginner-ready" },
+                { label: "Focus", value: "Systems that ship" }
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-xl border border-white/10 bg-white/5 px-3 py-3"
+                >
+                  <p className="text-[11px] uppercase tracking-wide text-onDarkSoft">
+                    {item.label}
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-onDark">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="flex -space-x-2" aria-hidden="true">
+              {["#4a2c1a", "#7a4a2a", "#c48a5a", "#1a1a5e", "#2e1a12", "#8d5a3a"].map(
+                (color) => (
+                  <span
+                    key={color}
+                    className="inline-block h-9 w-9 rounded-full ring-2 ring-surfaceDark"
+                    style={{ backgroundColor: color }}
+                  />
+                )
+              )}
+            </div>
+            <p className="text-xs text-onDarkSoft">
+              Representation across skin tone, hair, gender, and lived experience.
+              Real community photos go here as permissions land.
+            </p>
           </div>
-        ))}
+        </div>
       </div>
     </section>
-  );
-}
-
-const MODULES = [
-  { label: "Foundations & tooling", state: "done" as const },
-  { label: "Build a RAG app", state: "done" as const },
-  { label: "CI/CD for models", state: "active" as const, progress: 45 },
-  { label: "Monitoring & evals", state: "todo" as const },
-  { label: "Capstone deployment", state: "todo" as const }
-];
-
-function CurriculumPanel() {
-  return (
-    <div className="overflow-hidden rounded-2xl bg-surfaceDark shadow-glow">
-      <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
-        <span className="h-3 w-3 rounded-full bg-white/15" />
-        <span className="h-3 w-3 rounded-full bg-white/15" />
-        <span className="h-3 w-3 rounded-full bg-white/15" />
-        <span className="ml-2 text-xs font-medium text-onDarkSoft">
-          MLOps &amp; GenAI · your course
-        </span>
-      </div>
-
-      <ol className="space-y-1 p-4">
-        {MODULES.map((m, i) => (
-          <li
-            key={m.label}
-            className="flex items-center gap-3 rounded-lg px-3 py-2.5"
-          >
-            <span
-              className={
-                m.state === "done"
-                  ? "flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#5db872] text-[11px] font-bold text-surfaceDark"
-                  : m.state === "active"
-                    ? "flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[hsl(var(--primary))] text-[10px] text-white"
-                    : "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/20 text-[11px] text-onDarkSoft"
-              }
-            >
-              {m.state === "done" ? "✓" : m.state === "active" ? "▸" : i + 1}
-            </span>
-            <span
-              className={
-                m.state === "todo"
-                  ? "flex-1 text-sm text-onDarkSoft"
-                  : "flex-1 text-sm text-onDark"
-              }
-            >
-              {m.label}
-            </span>
-            {m.state === "active" ? (
-              <span className="flex items-center gap-2">
-                <span className="h-1.5 w-16 overflow-hidden rounded-full bg-white/10">
-                  <span
-                    className="block h-full rounded-full bg-[hsl(var(--primary))]"
-                    style={{ width: `${m.progress}%` }}
-                  />
-                </span>
-                <span className="font-mono text-xs text-onDarkSoft">
-                  {m.progress}%
-                </span>
-              </span>
-            ) : null}
-          </li>
-        ))}
-      </ol>
-
-      <div className="flex items-center gap-5 border-t border-white/10 px-5 py-3 text-xs text-onDarkSoft">
-        <span className="flex items-center gap-1.5">
-          <span className="text-[#e8a55a]">🔥</span> 7-day streak
-        </span>
-        <span className="flex items-center gap-1.5">
-          <span className="text-[hsl(var(--primary))]">★</span>
-          <span className="font-mono">320</span> points
-        </span>
-      </div>
-    </div>
   );
 }

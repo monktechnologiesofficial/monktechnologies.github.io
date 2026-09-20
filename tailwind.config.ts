@@ -15,12 +15,18 @@ export default {
         border: "hsl(var(--border))",
         primary: "hsl(var(--primary))",
         primaryForeground: "hsl(var(--primary-foreground))",
+        accent: "hsl(var(--accent))",
+        accentForeground: "hsl(var(--accent-foreground))",
         surfaceDark: "hsl(var(--surface-dark))",
         onDark: "hsl(var(--on-dark))",
-        onDarkSoft: "hsl(var(--on-dark-soft))"
+        onDarkSoft: "hsl(var(--on-dark-soft))",
+        gold: "hsl(var(--gold))",
+        electric: "hsl(var(--blue))",
+        success: "hsl(var(--green))"
       },
       fontFamily: {
-        display: ["var(--font-display)", "Cormorant Garamond", "Georgia", "serif"],
+        display: ["var(--font-display)", "Archivo", "Inter", "sans-serif"],
+        sans: ["var(--font-sans)", "Inter", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "JetBrains Mono", "ui-monospace", "monospace"]
       },
       borderRadius: {
@@ -28,12 +34,9 @@ export default {
         "2xl": "1.25rem"
       },
       boxShadow: {
-        // Claude is color-block first, shadows rare: a hairline ring + faint lift.
-        glow: "0 0 0 1px hsl(var(--border)), 0 1px 2px rgba(20,20,19,.04), 0 10px 30px -20px rgba(20,20,19,.15)"
+        glow: "0 0 0 1px hsl(var(--border)), 0 1px 2px rgba(26,26,94,.06), 0 18px 40px -24px rgba(26,26,94,.35)"
       }
     }
   },
   plugins: [typography]
 } satisfies Config;
-
-

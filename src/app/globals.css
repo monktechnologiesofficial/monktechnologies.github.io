@@ -5,20 +5,23 @@
 @layer base {
   :root {
     color-scheme: light;
-    /* Claude editorial palette — warm cream canvas, coral accent, navy dark surfaces */
-    --background: 48 33% 97%;        /* canvas  #faf9f5 */
-    --foreground: 60 3% 8%;          /* ink     #141413 */
-    --card: 39 35% 90%;              /* surface-card #efe9de */
-    --card-foreground: 60 3% 8%;
-    --muted: 37 39% 94%;             /* surface-soft #f5f0e8 */
-    --muted-foreground: 45 4% 41%;   /* muted   #6c6a64 */
-    --border: 30 22% 87%;            /* hairline #e6dfd8 */
-    --primary: 15 52% 58%;           /* coral   #cc785c */
-    --primary-foreground: 0 0% 100%;
-    /* dark navy surfaces — used by the footer (Claude's footer never inverts) */
-    --surface-dark: 40 7% 9%;        /* #181715 */
-    --on-dark: 48 33% 97%;           /* cream-tinted white #faf9f5 */
-    --on-dark-soft: 42 5% 61%;       /* #a09d96 */
+    --background: 240 33% 97%;
+    --foreground: 240 56% 16%;
+    --card: 240 40% 95%;
+    --card-foreground: 240 56% 16%;
+    --muted: 240 28% 93%;
+    --muted-foreground: 240 14% 32%;
+    --border: 240 22% 86%;
+    --primary: 43 100% 50%;
+    --primary-foreground: 240 56% 18%;
+    --accent: 216 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --surface-dark: 240 56% 24%;
+    --on-dark: 240 33% 97%;
+    --on-dark-soft: 240 20% 78%;
+    --gold: 43 100% 50%;
+    --blue: 216 100% 47%;
+    --green: 145 100% 36%;
   }
 
   * {
@@ -29,30 +32,27 @@
     @apply bg-background text-foreground antialiased;
   }
 
-  /* Editorial split: slab-serif display headlines, humanist sans body */
   h1,
   h2,
   h3 {
-    font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+    font-family: var(--font-display), "Archivo", Inter, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
 
   ::selection {
-    background: hsl(var(--primary) / 0.25);
+    background: hsl(var(--gold) / 0.35);
   }
 }
 
 @layer utilities {
-  .noise {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
-    background-size: 140px 140px;
-    mix-blend-mode: overlay;
-    opacity: 0.35;
-    pointer-events: none;
-  }
-
   .text-balance {
     text-wrap: balance;
   }
+
+  .neural-grid {
+    background-image:
+      radial-gradient(circle at 1px 1px, hsl(var(--accent) / 0.14) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
 }
-
-

@@ -3,19 +3,11 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
 import { MobileNav } from "@/components/mobile-nav";
-
-const NAV = [
-  { href: "/courses", label: "Courses" },
-  { href: "/youtube", label: "YouTube" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" }
-];
-
-const LMS_URL = "https://lms.monk-technologies.com/login";
+import { LMS_URL, NAV, WHATSAPP_URL } from "@/lib/site";
 
 export function SiteNavbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/60 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6">
         <Link href="/" className="group flex items-center gap-3">
           <div className="relative h-9 w-9 overflow-hidden">
@@ -33,12 +25,12 @@ export function SiteNavbar() {
               Monk Technologies
             </p>
             <p className="text-xs text-mutedForeground">
-              Training-first AI education
+              Black learners, leading AI
             </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {NAV.map((item) => (
             <Link
               key={item.href}
@@ -66,19 +58,17 @@ export function SiteNavbar() {
           </Button>
           <Button
             asChild
-            href="https://wa.link/nprk9l"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
             size="md"
             className="hidden md:inline-flex"
           >
-            Chat on WhatsApp
+            Join the Community →
           </Button>
-          <MobileNav items={NAV} lmsUrl={LMS_URL} />
+          <MobileNav items={[...NAV]} lmsUrl={LMS_URL} />
         </div>
       </div>
     </header>
   );
 }
-
-

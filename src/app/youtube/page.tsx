@@ -15,12 +15,12 @@ export default function YouTubePage() {
         <p className="text-xs font-semibold uppercase tracking-wide text-mutedForeground">
           YouTube
         </p>
-        <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-          Learn for free on MTAlphaOfficial
+        <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
+          Start free on MTAlphaOfficial
         </h1>
         <p className="max-w-2xl text-balance text-mutedForeground">
-          We publish practical lessons on MLOps and GenAI—watch a few to get a
-          feel for our teaching style.
+          Practical MLOps and GenAI lessons. Watch how we teach, then step into
+          a cohort when you are ready.
         </p>
         <div className="pt-2">
           <Button
@@ -30,7 +30,7 @@ export default function YouTubePage() {
             rel="noreferrer"
             variant="secondary"
           >
-            Open channel
+            Start Free →
           </Button>
         </div>
       </div>

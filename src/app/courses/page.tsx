@@ -11,12 +11,12 @@ export default async function CoursesPage() {
         <p className="text-xs font-semibold uppercase tracking-wide text-mutedForeground">
           Courses
         </p>
-        <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h1 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl">
           Pick the path that gets you shipping.
         </h1>
         <p className="max-w-2xl text-balance text-mutedForeground">
-          Cohort-based and project-driven programs. Every course page is
-          editable via MDX so updates are fast.
+          Cohort-based, project-driven programs in MLOps and GenAI—built for
+          Black learners who want career-ready skill, not theater.
         </p>
       </div>
 
@@ -56,7 +56,7 @@ export default async function CoursesPage() {
             target="_blank"
             rel="noreferrer"
           >
-            Chat on WhatsApp
+            Join the Community →
           </Button>
           <Button asChild variant="secondary" href="/youtube">
             Watch free lessons
