@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CommunityPhoto } from "@/components/community-photo";
@@ -119,21 +118,6 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
-
-      <div className="flex items-center gap-4 rounded-2xl border border-border bg-muted p-5">
-        <div className="relative h-12 w-12 shrink-0">
-          <Image
-            src="/brand/monk-logo.png"
-            alt="Monk Technologies logo"
-            fill
-            sizes="48px"
-            className="object-contain"
-          />
-        </div>
-        <p className="text-xs text-mutedForeground">
-          Training-first. Community-held.
-        </p>
-      </div>
     </div>
   );
 }
