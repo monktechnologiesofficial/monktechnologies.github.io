@@ -51,11 +51,11 @@ export const resourceLinks = [
 
 export const hubPosts = [
   {
-    title: "Navigating AI as yourself"
+    title: "Navigating AI as yourself",
     body: "How we think about interviews, portfolios, and rooms that were not designed with you in mind—without shrinking."
   },
   {
-    title: "Building AI for our communities"
+    title: "Building AI for our communities",
     body: "Project ideas that serve real needs: small-business automation, health navigation, local information, civic tools."
   },
   {
