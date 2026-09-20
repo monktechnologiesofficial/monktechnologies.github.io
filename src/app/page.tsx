@@ -1,37 +1,53 @@
 import { Hero } from "@/components/hero";
 import { Section } from "@/components/section";
 import { CourseGridPreview } from "@/components/course-grid-preview";
-import { LiteYouTubeEmbed } from "@/components/lite-youtube-embed";
 import { EnrollmentCTA } from "@/components/enrollment-cta";
 import { Testimonials } from "@/components/testimonials";
+import { CommunityMosaic } from "@/components/community-mosaic";
+import { CommunityPhoto } from "@/components/community-photo";
+import { WhatsAppJoin } from "@/components/whatsapp-join";
 import { homeCopy } from "@/content/copy";
-import { YOUTUBE_URL } from "@/lib/site";
-
-const YT_FEATURED = ["dioyxSaVFmw", "NOpK2otUxus"];
+import { photoCredit, photos } from "@/content/photos";
 
 export default function HomePage() {
   return (
     <div className="space-y-24">
       <Hero />
 
+      <Section
+        eyebrow="In the work"
+        title="A community that builds out loud"
+        description="Home offices, coworking tables, whiteboards, and late-night pair sessions. This is what the room looks like."
+      >
+        <CommunityMosaic />
+      </Section>
+
       <Section eyebrow="Why Monk Technologies" title={homeCopy.whyTitle}>
-        <div className="grid gap-8 md:grid-cols-[1.15fr_.85fr]">
-          <div className="space-y-4 text-base leading-relaxed text-mutedForeground">
-            {homeCopy.whyBody.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
+        <div className="grid items-start gap-8 md:grid-cols-[.9fr_1.1fr]">
+          <CommunityPhoto
+            src={photos.critique.src}
+            alt={photos.critique.alt}
+            className="aspect-[4/5] md:aspect-[3/4]"
+            sizes="(max-width: 768px) 100vw, 40vw"
+          />
+          <div className="space-y-6">
+            <div className="space-y-4 text-base leading-relaxed text-mutedForeground">
+              {homeCopy.whyBody.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+            <ul className="grid gap-3">
+              {homeCopy.benefits.map((item) => (
+                <li
+                  key={item.title}
+                  className="rounded-2xl border border-border bg-card p-5"
+                >
+                  <p className="font-semibold">{item.title}</p>
+                  <p className="mt-1 text-sm text-mutedForeground">{item.body}</p>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="grid gap-3">
-            {homeCopy.benefits.map((item) => (
-              <li
-                key={item.title}
-                className="rounded-2xl border border-border bg-card p-5"
-              >
-                <p className="font-semibold">{item.title}</p>
-                <p className="mt-1 text-sm text-mutedForeground">{item.body}</p>
-              </li>
-            ))}
-          </ul>
         </div>
       </Section>
 
@@ -46,33 +62,15 @@ export default function HomePage() {
       <Section
         eyebrow="Community"
         title="What our community says"
-        description="Learner words, unedited. We use initials until we have permission to publish names and photos."
+        description="Learner words, unedited. Portrait stand-ins until we have permission to publish names and photos."
       >
         <Testimonials />
       </Section>
 
-      <Section
-        eyebrow="YouTube"
-        title="Start free on MLOps and GenAI"
-        description="Short, practical videos—preview the teaching style before you enroll."
-        actions={[
-          {
-            label: "Start Free →",
-            href: YOUTUBE_URL,
-            variant: "secondary",
-            target: "_blank",
-            rel: "noreferrer"
-          }
-        ]}
-      >
-        <div className="grid gap-4 md:grid-cols-2">
-          {YT_FEATURED.map((id) => (
-            <LiteYouTubeEmbed key={id} videoId={id} />
-          ))}
-        </div>
-      </Section>
+      <WhatsAppJoin heading="Scan to join the community" />
 
       <EnrollmentCTA />
+      <p className="text-center text-xs text-mutedForeground">{photoCredit}</p>
     </div>
   );
 }

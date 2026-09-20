@@ -25,7 +25,7 @@ export function SiteNavbar() {
               Monk Technologies
             </p>
             <p className="text-xs text-mutedForeground">
-              Black learners, leading AI
+              Build. Critique. Lead.
             </p>
           </div>
         </Link>

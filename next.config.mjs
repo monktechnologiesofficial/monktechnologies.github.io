@@ -18,8 +18,7 @@ const nextConfig = {
     // next export requires unoptimized images.
     unoptimized: true,
     remotePatterns: [
-      { protocol: "https", hostname: "i.ytimg.com" },
-      { protocol: "https", hostname: "img.youtube.com" }
+      { protocol: "https", hostname: "i.ytimg.com" }
     ]
   }
 };

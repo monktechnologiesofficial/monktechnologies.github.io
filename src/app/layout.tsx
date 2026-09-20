@@ -29,21 +29,20 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
 const description =
-  "AI training for Black learners. Hands-on MLOps and GenAI at Monk Technologies, a Black AI academy where you build, critique, and lead.";
+  "Hands-on MLOps and GenAI at Monk Technologies—an academy where you build, critique, and lead.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Monk Technologies — Black AI Academy",
+    default: "Monk Technologies — AI Training",
     template: "%s — Monk Technologies"
   },
   description,
   keywords: [
-    "AI training for Black learners",
-    "Black AI academy",
     "MLOps course for beginners",
     "GenAI training",
-    "Monk Technologies"
+    "Monk Technologies",
+    "AI academy"
   ],
   openGraph: {
     type: "website",

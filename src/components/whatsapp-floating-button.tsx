@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
+import { WHATSAPP_URL } from "@/lib/site";
 
 export function WhatsAppFloatingButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +16,7 @@ export function WhatsAppFloatingButton() {
 
   return (
     <a
-      href="https://wa.link/nprk9l"
+      href={WHATSAPP_URL}
       target="_blank"
       rel="noreferrer"
       aria-label="Join the community on WhatsApp"

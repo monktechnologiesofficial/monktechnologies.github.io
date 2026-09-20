@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { CommunityPhoto } from "@/components/community-photo";
 import { hubPosts, pioneers, resourceLinks } from "@/content/resources";
+import { photos } from "@/content/photos";
 import { WHATSAPP_URL } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Black in AI",
   description:
-    "Black in AI resources, pioneers, and a hub for Black learners in tech—from Monk Technologies."
+    "Pioneers, institutes, and a resource hub for builders in AI—from Monk Technologies."
 };
 
 export default function ResourcesPage() {
@@ -20,10 +22,15 @@ export default function ResourcesPage() {
           The people and ideas that make this possible.
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-mutedForeground">
-          A living resource hub for Black learners in AI. We feature pioneers,
-          communities, and essays that treat you as a builder and a critic—not
-          a diversity statistic.
+          A living resource hub. Pioneers, communities, and essays that treat
+          you as a builder and a critic—not a diversity statistic.
         </p>
+        <CommunityPhoto
+          src={photos.meeting.src}
+          alt={photos.meeting.alt}
+          className="aspect-[21/9] max-h-72 w-full"
+          sizes="100vw"
+        />
       </div>
 
       <section className="space-y-6">

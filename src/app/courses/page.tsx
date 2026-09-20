@@ -16,7 +16,7 @@ export default async function CoursesPage() {
         </h1>
         <p className="max-w-2xl text-balance text-mutedForeground">
           Cohort-based, project-driven programs in MLOps and GenAI—built for
-          Black learners who want career-ready skill, not theater.
+          people who want career-ready skill, not theater.
         </p>
       </div>
 
@@ -52,14 +52,14 @@ export default async function CoursesPage() {
         <div className="mt-4 flex flex-wrap gap-3">
           <Button
             asChild
-            href="https://wa.link/nprk9l"
+            href="https://chat.whatsapp.com/CTM8XI8RLNu5BJToghFut5?mode=gi_t"
             target="_blank"
             rel="noreferrer"
           >
             Join the Community →
           </Button>
-          <Button asChild variant="secondary" href="/youtube">
-            Watch free lessons
+          <Button asChild variant="secondary" href="/community">
+            Scan the QR
           </Button>
         </div>
       </div>

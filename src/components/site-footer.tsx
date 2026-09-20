@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WHATSAPP_URL, YOUTUBE_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -10,8 +10,8 @@ export function SiteFooter() {
             Monk Technologies
           </p>
           <p className="text-sm text-onDarkSoft">
-            A Black AI academy. Hands-on MLOps and GenAI for learners ready to
-            build, critique, and lead.
+            Training-first AI education. Hands-on MLOps and GenAI for learners
+            ready to build, critique, and lead.
           </p>
         </div>
 
@@ -22,9 +22,6 @@ export function SiteFooter() {
             </p>
             <Link className="block transition hover:text-onDark" href="/courses">
               Courses
-            </Link>
-            <Link className="block transition hover:text-onDark" href="/youtube">
-              Start free
             </Link>
             <Link
               className="block transition hover:text-onDark"
@@ -62,22 +59,14 @@ export function SiteFooter() {
             target="_blank"
             rel="noreferrer"
           >
-            WhatsApp
-          </a>
-          <a
-            className="block transition hover:text-onDark"
-            href={YOUTUBE_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            YouTube: MTAlphaOfficial
+            WhatsApp group
           </a>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 text-xs text-onDarkSoft sm:px-6">
           <p>© {new Date().getFullYear()} Monk Technologies. All rights reserved.</p>
-          <p className="hidden sm:block">Year-round. Not a campaign.</p>
+          <p className="hidden sm:block">Year-round. Not a campaign. Photos: Nappy.co (CC0).</p>
         </div>
       </div>
     </footer>

@@ -34,7 +34,7 @@ export const pioneers = [
 export const resourceLinks = [
   {
     title: "Black in AI",
-    body: "Community, workshop, and scholarship network for Black researchers and practitioners in AI.",
+    body: "Community, workshop, and scholarship network for researchers and practitioners in AI.",
     href: "https://blackinai.github.io/"
   },
   {
@@ -51,11 +51,11 @@ export const resourceLinks = [
 
 export const hubPosts = [
   {
-    title: "Navigating AI as a Black professional",
+    title: "Navigating AI as yourself"
     body: "How we think about interviews, portfolios, and rooms that were not designed with you in mind—without shrinking."
   },
   {
-    title: "Building AI for Black communities",
+    title: "Building AI for our communities"
     body: "Project ideas that serve real needs: small-business automation, health navigation, local information, civic tools."
   },
   {

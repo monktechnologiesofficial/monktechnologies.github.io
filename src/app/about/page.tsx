@@ -1,20 +1,40 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { CommunityPhoto } from "@/components/community-photo";
 import { aboutCopy } from "@/content/copy";
+import { photoCredit, photos } from "@/content/photos";
 import { WHATSAPP_URL } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Mission, values, and commitment of Monk Technologies, a Black AI academy training learners to build, critique, and lead."
+    "Mission, values, and team of Monk Technologies—training learners to build, critique, and lead."
 };
+
+const team = [
+  {
+    title: "Instructors",
+    body: "Live sessions on MLOps, GenAI, RAG, and deployment—patient, thorough, production-minded.",
+    photo: photos.instructorLocs
+  },
+  {
+    title: "Mentors",
+    body: "Feedback on projects, interview prep, and how to carry yourself in rooms that were not built for you.",
+    photo: photos.mentorship
+  },
+  {
+    title: "Community hosts",
+    body: "WhatsApp and cohort spaces that stay warm, specific, and useful.",
+    photo: photos.instructorOffice
+  }
+];
 
 export default function AboutPage() {
   return (
     <div className="space-y-16">
-      <div className="grid items-start gap-8 md:grid-cols-[1.2fr_.8fr]">
+      <div className="grid items-start gap-8 md:grid-cols-[1.15fr_.85fr]">
         <div className="space-y-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-electric">
             About
@@ -45,31 +65,12 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-glow">
-          <div className="relative flex items-center gap-4">
-            <div className="relative h-14 w-14 overflow-hidden">
-              <Image
-                src="/brand/monk-logo.png"
-                alt="Monk logo"
-                fill
-                sizes="56px"
-                className="object-contain"
-              />
-            </div>
-            <div>
-              <p className="text-sm font-semibold tracking-tight">
-                Monk Technologies
-              </p>
-              <p className="text-sm text-mutedForeground">
-                Training-first. Community-held.
-              </p>
-            </div>
-          </div>
-          <p className="mt-6 text-sm leading-relaxed text-mutedForeground">
-            We turn MLOps, GenAI, and deployment into guided projects you can
-            actually ship—and into a practice of asking who a system serves.
-          </p>
-        </div>
+        <CommunityPhoto
+          src={photos.meeting.src}
+          alt={photos.meeting.alt}
+          className="aspect-[4/3] shadow-glow md:aspect-square"
+          sizes="(max-width: 768px) 100vw, 40vw"
+        />
       </div>
 
       <section className="space-y-6">
@@ -94,39 +95,43 @@ export default function AboutPage() {
           Instructors and team
         </h2>
         <p className="max-w-2xl text-sm leading-relaxed text-mutedForeground">
-          We teach with Black instructors and mentors who have worked in tech
-          as themselves. Named bios and photos will publish here with
-          permission—no stock stand-ins.
+          We teach with instructors and mentors who have worked in tech as
+          themselves. Named bios publish here with permission. Until then,
+          these are labeled stand-ins—not claimed as our staff.
         </p>
         <div className="grid gap-4 md:grid-cols-3">
-          {[
-            {
-              title: "Instructors",
-              body: "Live sessions on MLOps, GenAI, RAG, and deployment—patient, thorough, production-minded."
-            },
-            {
-              title: "Mentors",
-              body: "Feedback on projects, interview prep, and how to carry yourself in rooms that were not built for you."
-            },
-            {
-              title: "Community hosts",
-              body: "WhatsApp and cohort spaces that stay warm, specific, and useful."
-            }
-          ].map((card) => (
+          {team.map((card) => (
             <div
               key={card.title}
-              className="rounded-2xl border border-border bg-muted p-6"
+              className="overflow-hidden rounded-2xl border border-border bg-card"
             >
-              <div
-                className="mb-4 h-16 w-16 rounded-full bg-gradient-to-br from-surfaceDark via-electric to-gold"
-                aria-hidden="true"
+              <CommunityPhoto
+                src={card.photo.src}
+                alt={card.photo.alt}
+                className="aspect-[4/5]"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <h3 className="font-semibold">{card.title}</h3>
-              <p className="mt-2 text-sm text-mutedForeground">{card.body}</p>
+              <div className="p-5">
+                <h3 className="font-semibold">{card.title}</h3>
+                <p className="mt-2 text-sm text-mutedForeground">{card.body}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
+
+      <div className="flex items-center gap-4 rounded-2xl border border-border bg-muted p-5">
+        <div className="relative h-12 w-12 shrink-0">
+          <Image
+            src="/brand/monk-logo.png"
+            alt="Monk Technologies logo"
+            fill
+            sizes="48px"
+            className="object-contain"
+          />
+        </div>
+        <p className="text-xs text-mutedForeground">{photoCredit}</p>
+      </div>
     </div>
   );
 }

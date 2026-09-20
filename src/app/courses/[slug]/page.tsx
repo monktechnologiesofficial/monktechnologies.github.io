@@ -64,14 +64,14 @@ export default async function CourseDetailPage({
           <Button
             asChild
             size="lg"
-            href="https://wa.link/nprk9l"
+            href="https://chat.whatsapp.com/CTM8XI8RLNu5BJToghFut5?mode=gi_t"
             target="_blank"
             rel="noreferrer"
           >
             Enroll via WhatsApp
           </Button>
-          <Button asChild size="lg" variant="secondary" href="/youtube">
-            Watch free lessons
+          <Button asChild size="lg" variant="secondary" href="/community">
+            Join the group
           </Button>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default async function CourseDetailPage({
             <Button
               asChild
               variant="secondary"
-              href="https://wa.link/nprk9l"
+              href="https://chat.whatsapp.com/CTM8XI8RLNu5BJToghFut5?mode=gi_t"
               target="_blank"
               rel="noreferrer"
             >

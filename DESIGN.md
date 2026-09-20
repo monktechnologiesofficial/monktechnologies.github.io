@@ -1,6 +1,6 @@
 # Monk Technologies — visual design brief
 
-Training-first Black AI academy. Lead users of AI, not a diversity campaign.
+Training-first AI academy. Lead users of AI, not a diversity campaign.
 
 ## Color
 
@@ -28,4 +28,4 @@ Prefer real community photos with permission. Until then: no stock faces. Use in
 
 ## Voice
 
-Empowering, joyful, intelligent. No struggle porn, no fake AAVE, no salary promises. Black learners are the lead users of this product year-round.
+Empowering, joyful, intelligent. No struggle porn, no fake AAVE, no salary promises. The community is the lead user of this product year-round.

@@ -21,7 +21,7 @@ export function WhatsAppCTA() {
             asChild
             size="lg"
             variant="secondary"
-            href="https://wa.link/nprk9l"
+            href="https://chat.whatsapp.com/CTM8XI8RLNu5BJToghFut5?mode=gi_t"
             target="_blank"
             rel="noreferrer"
             className="border-0 ring-0"
