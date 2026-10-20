@@ -37,6 +37,7 @@ We offer online courses and bootcamps in:
 
 - Website: https://monk-technologies.com
 - Courses: https://monk-technologies.com/courses
+- Blog: https://monk-technologies.com/blog
 - About: https://monk-technologies.com/about
 - Community: https://monk-technologies.com/community
 - Contact: https://monk-technologies.com/contact

@@ -5,6 +5,7 @@ export const LMS_URL = "https://lms.monk-technologies.com/login";
 
 export const NAV = [
   { href: "/courses", label: "Courses" },
+  { href: "/blog", label: "Blog" },
   { href: "/community", label: "Community" },
   { href: "/resources", label: "Black in AI" },
   { href: "/about", label: "About" },

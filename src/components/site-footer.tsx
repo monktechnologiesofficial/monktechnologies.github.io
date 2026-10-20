@@ -23,6 +23,9 @@ export function SiteFooter() {
             <Link className="block transition hover:text-onDark" href="/courses">
               Courses
             </Link>
+            <Link className="block transition hover:text-onDark" href="/blog">
+              Blog
+            </Link>
             <Link
               className="block transition hover:text-onDark"
               href="/resources"
