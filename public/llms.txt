@@ -1,0 +1,58 @@
+# Monk Technologies - AI Training Institute
+
+> Hands-on AI training institute in Bengaluru, India offering MLOps, GenAI, and Python courses
+
+## About
+
+Monk Technologies is a training-first AI academy based in Bengaluru (Bangalore), India. We prepare learners to build production AI systems, work with modern GenAI tools, and deploy ML models with confidence.
+
+## Courses
+
+We offer hands-on courses and bootcamps in:
+
+- **MLOps Fundamentals**: Learn the MLOps lifecycle, experiment tracking with MLflow, containerization with Docker, and model deployment with BentoML. Target audience: students with no prior AI/ML experience. Part of the 2-month program.
+  URL: https://monk-technologies.com/courses/mlops-fundamentals
+
+- **MLOps & GenAI**: Comprehensive 2-month bootcamp covering MLOps practices, generative AI applications, RAG systems, LangChain, CI/CD for ML models, and production deployment.
+  URL: https://monk-technologies.com/courses/mlops-genai
+
+- **Generative AI & Prompt Engineering**: Master prompt engineering techniques (zero-shot, few-shot, chain-of-thought), retrieval-augmented generation (RAG), vector databases, LangChain framework, and agentic AI systems. Target audience: students with no prior AI/ML experience. Part of the 2-month program.
+  URL: https://monk-technologies.com/courses/generative-ai-prompt-engineering
+
+- **AI Agent Engineering**: Build autonomous AI agents, implement agentic workflows, and create production-ready agent systems.
+  URL: https://monk-technologies.com/courses/ai-agent-engineering
+
+- **Python Fundamentals**: Optional beginner-level Python course for learners preparing for MLOps and GenAI courses.
+  URL: https://monk-technologies.com/courses/python-fundamentals
+
+## Key Information
+
+- **Location**: Bengaluru (Bangalore), India
+- **Format**: Hands-on, project-driven, instructor-led sessions
+- **Community**: Active WhatsApp community for learners, alumni, and mentors
+- **Focus**: Portfolio-grade projects, production-ready skills, career preparation
+- **Approach**: Training-first education with emphasis on building real systems
+
+## Contact
+
+- Website: https://monk-technologies.com
+- Courses: https://monk-technologies.com/courses
+- About: https://monk-technologies.com/about
+- Community: https://monk-technologies.com/community
+- Contact: https://monk-technologies.com/contact
+- Learning Management System: https://lms.monk-technologies.com/login
+
+## Target Audience
+
+Our courses are designed for:
+- Students new to AI/ML looking to enter the field
+- Professionals seeking hands-on MLOps and GenAI skills
+- Learners who want to build production-ready AI systems
+- Anyone interested in AI training bootcamps in India
+
+## Teaching Philosophy
+
+We train learners to be critical thinkers who can build, critique, and lead in AI—not just use existing tools. Our project-driven curriculum emphasizes real-world applications, portfolio-grade work, and community support.
+
+---
+Last updated: 2026-10-20

@@ -8,7 +8,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Black in AI",
   description:
-    "Pioneers, institutes, and a resource hub for builders in AI—from Monk Technologies."
+    "Pioneers, communities, and resources for Black builders in AI. A living resource hub from Monk Technologies celebrating those who lead, critique, and shape the future of artificial intelligence.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://monk-technologies.com"}/resources`
+  }
 };
 
 export default function ResourcesPage() {

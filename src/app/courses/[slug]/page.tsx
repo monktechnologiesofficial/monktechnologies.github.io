@@ -3,13 +3,51 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Prose } from "@/components/prose";
+import { StructuredData } from "@/components/structured-data";
 import { getCourseSlugs, getCourseSourceBySlug } from "@/content/courses";
 import { compileMDX } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import type { Metadata } from "next";
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://monk-technologies.com";
 
 export async function generateStaticParams() {
   const slugs = await getCourseSlugs();
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  let meta: Awaited<ReturnType<typeof getCourseSourceBySlug>>["meta"];
+  try {
+    ({ meta } = await getCourseSourceBySlug(slug));
+  } catch {
+    return {};
+  }
+
+  const title = meta.title;
+  const description = meta.highlights?.length
+    ? `${meta.title}: ${meta.highlights.slice(0, 3).join(", ")}. ${meta.duration ? `Duration: ${meta.duration}.` : ""} Hands-on AI training course at Monk Technologies, Bangalore.`
+    : `Learn ${meta.title} with hands-on training at Monk Technologies AI institute in Bangalore, India.`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${siteUrl}/courses/${slug}`
+    },
+    openGraph: {
+      title: `${title} — Monk Technologies`,
+      description,
+      url: `${siteUrl}/courses/${slug}`,
+      type: "website"
+    }
+  };
 }
 
 export default async function CourseDetailPage({
@@ -35,8 +73,53 @@ export default async function CourseDetailPage({
     }
   });
 
+  const courseData = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: meta.title,
+    description: meta.highlights?.join(", ") || meta.title,
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "Monk Technologies",
+      url: siteUrl
+    },
+    educationalLevel: meta.level || "All levels",
+    inLanguage: "en",
+    isAccessibleForFree: false,
+    coursePrerequisites: meta.level?.includes("Beginner")
+      ? "No prior experience required"
+      : "Basic understanding of programming recommended"
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Courses",
+        item: `${siteUrl}/courses`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: meta.title,
+        item: `${siteUrl}/courses/${slug}`
+      }
+    ]
+  };
+
   return (
-    <div className="space-y-10">
+    <>
+      <StructuredData data={[courseData, breadcrumbData]} />
+      <div className="space-y-10">
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
           <Link
@@ -137,6 +220,7 @@ export default async function CourseDetailPage({
         </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -61,6 +61,14 @@ export function SiteFooter() {
           >
             WhatsApp group
           </a>
+          <a
+            className="block transition hover:text-onDark"
+            href="https://www.youtube.com/@MTAlphaOfficial"
+            target="_blank"
+            rel="noreferrer"
+          >
+            YouTube
+          </a>
         </div>
       </div>
       <div className="border-t border-white/10">
