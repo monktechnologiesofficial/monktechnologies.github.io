@@ -32,8 +32,8 @@ export async function generateMetadata({
 
   const title = meta.title;
   const description = meta.highlights?.length
-    ? `${meta.title}: ${meta.highlights.slice(0, 3).join(", ")}. ${meta.duration ? `Duration: ${meta.duration}.` : ""} Hands-on AI training course at Monk Technologies, Bangalore.`
-    : `Learn ${meta.title} with hands-on training at Monk Technologies AI institute in Bangalore, India.`;
+    ? `${meta.title}: ${meta.highlights.slice(0, 3).join(", ")}. ${meta.duration ? `Duration: ${meta.duration}.` : ""} Online AI training course at Monk Technologies.`
+    : `Learn ${meta.title} with online hands-on training at Monk Technologies AI institute.`;
 
   return {
     title,

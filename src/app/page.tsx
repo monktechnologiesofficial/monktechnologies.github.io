@@ -20,23 +20,31 @@ export default function HomePage() {
     "@type": "EducationalOrganization",
     name: "Monk Technologies",
     description:
-      "AI training institute in Bengaluru, India offering hands-on MLOps, GenAI, and Python courses. Project-driven bootcamps with expert instructors.",
+      "Online AI training institute offering hands-on MLOps, GenAI, and Python courses. Project-driven bootcamps with expert instructors serving students across the USA and Canada.",
     url: siteUrl,
     logo: `${siteUrl}/brand/logo.png`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Bengaluru",
-      addressRegion: "Karnataka",
-      addressCountry: "IN"
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "India"
-    },
-    founder: {
-      "@type": "Organization",
-      name: "Monk Technologies"
-    }
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "United States"
+      },
+      {
+        "@type": "Country",
+        name: "Canada"
+      },
+      {
+        "@type": "State",
+        name: "Maryland"
+      },
+      {
+        "@type": "State",
+        name: "Texas"
+      },
+      {
+        "@type": "State",
+        name: "Alberta"
+      }
+    ]
   };
 
   const breadcrumbData = {

@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Monk Technologies is an AI training institute in Bengaluru, India. Learn about our mission, values, instructors, and commitment to training the next generation of AI leaders.",
+    "Monk Technologies is an online AI training institute. Learn about our mission, values, instructors, and commitment to training the next generation of AI leaders across the USA and Canada.",
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://monk-technologies.com"}/about`
   }

@@ -29,26 +29,25 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
 const description =
-  "AI training institute in Bengaluru, India offering hands-on MLOps, GenAI, and Python courses. Project-driven bootcamps with expert instructors. Learn AI/ML with real-world applications.";
+  "Online AI training institute offering hands-on MLOps, GenAI, and Python courses. Project-driven bootcamps with expert instructors. Learn AI/ML with real-world applications.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Monk Technologies — AI Training Institute in Bangalore, India",
+    default: "Monk Technologies — Online AI Training Institute",
     template: "%s — Monk Technologies"
   },
   description,
   keywords: [
-    "AI training institute",
-    "AI training institute in Bangalore",
-    "AI training institute in India",
-    "generative AI course",
+    "online AI training institute",
+    "AI training courses USA",
+    "generative AI course online",
     "MLOps course",
     "prompt engineering course",
     "AI bootcamp",
-    "GenAI training",
-    "machine learning course Bangalore",
-    "AI course India",
+    "GenAI training online",
+    "machine learning course online",
+    "AI training",
     "Monk Technologies"
   ],
   alternates: {
@@ -56,15 +55,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Monk Technologies — AI Training Institute in Bangalore, India",
+    title: "Monk Technologies — Online AI Training Institute",
     description,
     url: siteUrl,
     siteName: "Monk Technologies",
-    locale: "en_IN"
+    locale: "en_US"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Monk Technologies — AI Training Institute in Bangalore, India",
+    title: "Monk Technologies — Online AI Training Institute",
     description,
     site: "@MonkTechnologies"
   }

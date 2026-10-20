@@ -1,19 +1,19 @@
-# Monk Technologies - AI Training Institute
+# Monk Technologies - Online AI Training Institute
 
-> Hands-on AI training institute in Bengaluru, India offering MLOps, GenAI, and Python courses
+> Online AI training institute offering hands-on MLOps, GenAI, and Python courses to students across the USA and Canada
 
 ## About
 
-Monk Technologies is a training-first AI academy based in Bengaluru (Bangalore), India. We prepare learners to build production AI systems, work with modern GenAI tools, and deploy ML models with confidence.
+Monk Technologies is an online AI training institute serving students across the United States and Canada. We prepare learners to build production AI systems, work with modern GenAI tools, and deploy ML models with confidence through hands-on, project-driven courses.
 
 ## Courses
 
-We offer hands-on courses and bootcamps in:
+We offer online courses and bootcamps in:
 
 - **MLOps Fundamentals**: Learn the MLOps lifecycle, experiment tracking with MLflow, containerization with Docker, and model deployment with BentoML. Target audience: students with no prior AI/ML experience. Part of the 2-month program.
   URL: https://monk-technologies.com/courses/mlops-fundamentals
 
-- **MLOps & GenAI**: Comprehensive 2-month bootcamp covering MLOps practices, generative AI applications, RAG systems, LangChain, CI/CD for ML models, and production deployment.
+- **MLOps & GenAI**: Comprehensive 2-month online bootcamp covering MLOps practices, generative AI applications, RAG systems, LangChain, CI/CD for ML models, and production deployment.
   URL: https://monk-technologies.com/courses/mlops-genai
 
 - **Generative AI & Prompt Engineering**: Master prompt engineering techniques (zero-shot, few-shot, chain-of-thought), retrieval-augmented generation (RAG), vector databases, LangChain framework, and agentic AI systems. Target audience: students with no prior AI/ML experience. Part of the 2-month program.
@@ -27,8 +27,8 @@ We offer hands-on courses and bootcamps in:
 
 ## Key Information
 
-- **Location**: Bengaluru (Bangalore), India
-- **Format**: Hands-on, project-driven, instructor-led sessions
+- **Format**: Online, hands-on, project-driven, instructor-led sessions
+- **Service Area**: USA and Canada (students from Maryland, Texas, Alberta, and across North America)
 - **Community**: Active WhatsApp community for learners, alumni, and mentors
 - **Focus**: Portfolio-grade projects, production-ready skills, career preparation
 - **Approach**: Training-first education with emphasis on building real systems
@@ -44,11 +44,11 @@ We offer hands-on courses and bootcamps in:
 
 ## Target Audience
 
-Our courses are designed for:
+Our online courses are designed for:
 - Students new to AI/ML looking to enter the field
 - Professionals seeking hands-on MLOps and GenAI skills
 - Learners who want to build production-ready AI systems
-- Anyone interested in AI training bootcamps in India
+- Anyone interested in online AI training and bootcamps
 
 ## Teaching Philosophy
 

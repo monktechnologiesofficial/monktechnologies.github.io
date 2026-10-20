@@ -2,12 +2,12 @@ export const faqData = [
   {
     question: "What is Monk Technologies?",
     answer:
-      "Monk Technologies is an AI training institute based in Bengaluru (Bangalore), India. We offer hands-on courses in MLOps, generative AI, prompt engineering, and AI agent development. Our project-driven curriculum prepares learners to build, deploy, and maintain production AI systems."
+      "Monk Technologies is an online AI training institute offering hands-on courses in MLOps, generative AI, prompt engineering, and AI agent development. Our project-driven curriculum prepares learners across the USA and Canada to build, deploy, and maintain production AI systems."
   },
   {
-    question: "Where are you located?",
+    question: "Are the courses online or in-person?",
     answer:
-      "We are based in Bengaluru (Bangalore), Karnataka, India. Our courses are designed for learners across India and beyond, with flexible formats including in-person and online options."
+      "All our courses are delivered online, allowing students from across North America—including Maryland, Texas, Alberta, and beyond—to learn from anywhere with flexible scheduling."
   },
   {
     question: "Do I need prior AI or programming experience?",
@@ -32,7 +32,7 @@ export const faqData = [
   {
     question: "Can I work while taking the courses?",
     answer:
-      "Yes! Many of our students work full-time. We offer flexible scheduling and provide support through our WhatsApp community, so you can learn at a pace that fits your life."
+      "Yes! Many of our students work full-time. We offer flexible online scheduling and provide support through our WhatsApp community, so you can learn at a pace that fits your life regardless of your timezone."
   },
   {
     question: "How much do the courses cost?",
@@ -57,6 +57,6 @@ export const faqData = [
   {
     question: "What makes Monk Technologies different from other AI bootcamps?",
     answer:
-      "We're a community-first AI training institute that emphasizes real-world skills, portfolio-grade projects, and supportive learning. Our instructors understand the unique challenges faced by our learners, and we focus on building critical thinking—not just tool usage."
+      "We're a community-first online AI training institute that emphasizes real-world skills, portfolio-grade projects, and supportive learning. Our instructors understand the unique challenges faced by our learners, and we focus on building critical thinking—not just tool usage."
   }
 ];

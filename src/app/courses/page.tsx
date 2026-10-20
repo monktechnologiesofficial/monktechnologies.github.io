@@ -11,14 +11,14 @@ const siteUrl =
 export const metadata: Metadata = {
   title: "AI & MLOps Courses",
   description:
-    "Browse our AI training courses: MLOps Fundamentals, GenAI & Prompt Engineering, AI Agent Engineering, and Python. Hands-on bootcamps in Bangalore, India.",
+    "Browse our online AI training courses: MLOps Fundamentals, GenAI & Prompt Engineering, AI Agent Engineering, and Python. Hands-on bootcamps for students across the USA and Canada.",
   alternates: {
     canonical: `${siteUrl}/courses`
   },
   openGraph: {
     title: "AI & MLOps Courses — Monk Technologies",
     description:
-      "Browse our AI training courses: MLOps Fundamentals, GenAI & Prompt Engineering, AI Agent Engineering, and Python. Hands-on bootcamps in Bangalore, India.",
+      "Browse our online AI training courses: MLOps Fundamentals, GenAI & Prompt Engineering, AI Agent Engineering, and Python. Hands-on bootcamps for students across the USA and Canada.",
     url: `${siteUrl}/courses`
   }
 };
