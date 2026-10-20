@@ -19,7 +19,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Great teachers, great people, I can't just even talk enough of great minds like prof Jespo, prof Vamsi, prof Mandi, prof Dany….. all the other wonderful profs, you all rock. I am not yet gotten Job in the industry but I keep pushing, I believe it's on its way.",
+      "Great teachers, great people, I can't just even talk enough of great minds like prof Showmik, prof Avinash, prof Ayon….. all the other wonderful profs, you all rock. I am not yet gotten Job in the industry but I keep pushing, I believe it's on its way.",
     initials: "KP",
     role: "Job seeker",
     context: "Still pushing",
