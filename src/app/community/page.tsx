@@ -8,7 +8,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "Join the Monk Technologies community of builders, mentors, and alumni. WhatsApp is the front door."
+    "Join the Monk Technologies community of AI learners, builders, mentors, and alumni. Connect through WhatsApp, collaborate on projects, and grow together in our online AI training community.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://monk-technologies.com"}/community`
+  }
 };
 
 const gallery = [

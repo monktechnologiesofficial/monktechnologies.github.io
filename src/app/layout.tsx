@@ -29,31 +29,43 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
 const description =
-  "Hands-on MLOps and GenAI at Monk Technologies—an academy where you build, critique, and lead.";
+  "Online AI training institute offering hands-on MLOps, GenAI, and Python courses. Project-driven bootcamps with expert instructors. Learn AI/ML with real-world applications.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Monk Technologies — AI Training",
+    default: "Monk Technologies — Online AI Training Institute",
     template: "%s — Monk Technologies"
   },
   description,
   keywords: [
-    "MLOps course for beginners",
-    "GenAI training",
-    "Monk Technologies",
-    "AI academy"
+    "online AI training institute",
+    "AI training courses USA",
+    "generative AI course online",
+    "MLOps course",
+    "prompt engineering course",
+    "AI bootcamp",
+    "GenAI training online",
+    "machine learning course online",
+    "AI training",
+    "Monk Technologies"
   ],
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
     type: "website",
-    title: "Monk Technologies — Lead the AI revolution",
+    title: "Monk Technologies — Online AI Training Institute",
     description,
-    url: siteUrl
+    url: siteUrl,
+    siteName: "Monk Technologies",
+    locale: "en_US"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Monk Technologies — Lead the AI revolution",
-    description
+    title: "Monk Technologies — Online AI Training Institute",
+    description,
+    site: "@MonkTechnologies"
   }
 };
 

@@ -7,10 +7,26 @@ export default function robots(): MetadataRoute.Robots {
     process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/"
-    },
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/"
+      },
+      {
+        userAgent: [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "PerplexityBot",
+          "Google-Extended",
+          "Applebot-Extended"
+        ],
+        allow: "/"
+      }
+    ],
     sitemap: `${siteUrl.replace(/\/$/, "")}/sitemap.xml`
   };
 }

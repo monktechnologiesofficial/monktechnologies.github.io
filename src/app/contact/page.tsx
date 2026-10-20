@@ -6,7 +6,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Ready to join the next Monk Technologies cohort? Tell us your background and goals—we'll recommend a path."
+    "Contact Monk Technologies online AI training institute. Ready to join our AI, MLOps, or GenAI courses? Tell us your background and goals—we'll recommend a path.",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://monk-technologies.com"}/contact`
+  }
 };
 
 export default function ContactPage() {

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getCourseSlugs } from "@/content/courses";
+import { getBlogSlugs } from "@/content/blog";
 
 export const dynamic = "force-static";
 
@@ -14,13 +15,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/about",
     "/contact",
     "/community",
-    "/resources"
-  ].map(
-    (p) => ({
-      url: `${base}${p}`,
-      lastModified: new Date()
-    })
-  );
+    "/resources",
+    "/blog"
+  ].map((p) => ({
+    url: `${base}${p}`,
+    lastModified: new Date()
+  }));
 
   const slugs = await getCourseSlugs();
   const courseRoutes = slugs.map((slug) => ({
@@ -28,7 +28,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date()
   }));
 
-  return [...staticRoutes, ...courseRoutes];
+  const blogSlugs = await getBlogSlugs();
+  const blogRoutes = blogSlugs.map((slug) => ({
+    url: `${base}/blog/${slug}`,
+    lastModified: new Date()
+  }));
+
+  return [...staticRoutes, ...courseRoutes, ...blogRoutes];
 }
 
 

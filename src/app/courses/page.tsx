@@ -1,12 +1,54 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { StructuredData } from "@/components/structured-data";
 import { getAllCourses } from "@/content/courses";
+import type { Metadata } from "next";
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://monk-technologies.com";
+
+export const metadata: Metadata = {
+  title: "AI & MLOps Courses",
+  description:
+    "Browse our online AI training courses: MLOps Fundamentals, GenAI & Prompt Engineering, AI Agent Engineering, and Python. Hands-on bootcamps for students across the USA and Canada.",
+  alternates: {
+    canonical: `${siteUrl}/courses`
+  },
+  openGraph: {
+    title: "AI & MLOps Courses — Monk Technologies",
+    description:
+      "Browse our online AI training courses: MLOps Fundamentals, GenAI & Prompt Engineering, AI Agent Engineering, and Python. Hands-on bootcamps for students across the USA and Canada.",
+    url: `${siteUrl}/courses`
+  }
+};
 
 export default async function CoursesPage() {
   const courses = await getAllCourses();
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Courses",
+        item: `${siteUrl}/courses`
+      }
+    ]
+  };
+
   return (
-    <div className="space-y-10">
+    <>
+      <StructuredData data={breadcrumbData} />
+      <div className="space-y-10">
       <div className="space-y-3">
         <p className="text-xs font-semibold uppercase tracking-wide text-mutedForeground">
           Courses
@@ -64,6 +106,7 @@ export default async function CoursesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

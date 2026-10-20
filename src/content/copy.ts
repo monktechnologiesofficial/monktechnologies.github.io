@@ -1,10 +1,10 @@
 export const homeCopy = {
-  eyebrow: "Training-first AI academy",
+  eyebrow: "Online AI Training Institute",
   headline: "Lead the AI revolution—not just join it.",
   subheadline:
     "Hands-on AI training for learners ready to build, critique, and lead in tech.",
   heroBody: [
-    "Monk Technologies is a training-first AI academy where you don't just learn AI—you shape it.",
+    "Monk Technologies is an online AI training institute where you don't just learn AI—you shape it.",
     "Our project-driven curriculum in MLOps and GenAI gives you the skills to build real systems, automate real businesses, and solve real problems in our community.",
     "This is not just a course. It's a space to thrive."
   ],
@@ -44,7 +44,7 @@ export const homeCopy = {
 export const aboutCopy = {
   headline: "Built so you can lead in AI.",
   mission:
-    "Monk Technologies is a training-first AI academy. We prepare you to build production systems, critique biased models, and ship tools that serve our communities—not as guests in tech, but as the people who set the standard.",
+    "Monk Technologies is an online AI training institute. We prepare you to build production systems, critique biased models, and ship tools that serve our communities—not as guests in tech, but as the people who set the standard.",
   values: [
     {
       title: "Lead, don't wait",
