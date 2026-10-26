@@ -85,6 +85,17 @@ def hello_world():
 
 ## Content Guidelines
 
+### Text Contrast and Accessibility
+
+**IMPORTANT**: Never set custom text colors in blog posts. The blog template automatically ensures all text (paragraphs, list items, tables, blockquotes, code, etc.) has proper contrast (WCAG AA, minimum 4.5:1) against the background.
+
+- ❌ Do NOT add inline styles like `style="color: gray"`
+- ❌ Do NOT use HTML with color classes like `<span class="text-gray-500">`
+- ❌ Do NOT manually set text colors in any way
+- ✅ Use plain Markdown - the styles handle contrast automatically
+
+The blog template ensures all text is clearly readable. Adding custom colors risks making text invisible or hard to read.
+
 ### Writing Style
 
 - **Audience**: USA/Canada learners interested in AI training
